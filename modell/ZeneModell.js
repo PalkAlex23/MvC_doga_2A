@@ -25,8 +25,9 @@ export default class ZeneModell {
         this.kosarFeltolt()
     }
 
-    kosarFeltolt() {
-        
+    kosarFeltolt(index) {
+        this.#kosarLISTA.push(this.#zeneLISTA[index])
+        console.log(this.#kosarLISTA)
     }
 
     getList() {

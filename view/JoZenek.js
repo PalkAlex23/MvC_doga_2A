@@ -9,7 +9,7 @@ export default class JoZenek {
         this.#szuloELEM = szuloELEM
 
         this.#szuloELEM.empty()
-        zenekKiir()
+        this.zenekKiir()
     }
 
     zenekKiir() {

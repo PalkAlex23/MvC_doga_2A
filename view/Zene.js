@@ -15,23 +15,21 @@ export default class Zene {
     }
 
     zeneMegjelenit() {
-        for (let i = 0; i < zene.length; i++) {
-            this.#szuloELEM.append(
-                `
-                <div class="card col-lg-4 col-md-6 col-sm-12">
-                    <p>Előadó: ${this.#zene.eloado}</p>
-                    <p>A dal címe: ${this.#zene.dalcim}</p>
-                    <p>Kiadási év: ${this.#zene.kiadasi_ev}</p>
-                    <button class="zeneKosar">Kosárba</button>
-                </div>
-                `
-            )
-        }
+        this.#szuloELEM.append(
+             `
+            <div class="card p-3 col-lg-4 col-md-6 col-sm-12">
+                <h3>Előadó: ${this.#zene.eloado}</h3>
+                <p>A dal címe: ${this.#zene.dalcim}</p>
+                <p>Kiadási év: ${this.#zene.kiadasi_ev}</p>
+                <button class="zeneKosar btn btn-success m-2">Kosárba</button>
+            </div>
+            `
+        )
     }
 
     gombKattint() {
         this.zeneELEM.on("click", () => {
-            const e = CustomEvent("katt", {detail: this.#index});
+            const e = new CustomEvent("katt", {detail: this.#index});
             window.dispatchEvent(e);
         })
     }
