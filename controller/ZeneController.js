@@ -1,5 +1,5 @@
 import ZeneModell from "../modell/ZeneModell.js";
-import Zene from "../view/Zene.js";
+import JoZenek from "../view/JoZenek.js";
 
 export default class ZeneController {
     constructor() {
@@ -12,7 +12,7 @@ export default class ZeneController {
     #esemenykezelo() {
         $(window).on("katt", (event) => {
             console.log(event.detail)
-            new Zene(this.zenemodell.getList(), this.taroloELEM)
+            new JoZenek(this.zenemodell.getList(), this.taroloELEM)
         })
     }
 }

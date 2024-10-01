@@ -1,10 +1,10 @@
-import { zeneLISTA } from "./adat.js"
-
 export default class Zene {
+    #zene
     #index
     #szuloELEM
 
-    constructor(index, szuloELEM) {
+    constructor(zene, index, szuloELEM) {
+        this.#zene = zene
         this.#index = index
         this.#szuloELEM = szuloELEM
 
@@ -15,13 +15,13 @@ export default class Zene {
     }
 
     zeneMegjelenit() {
-        for (let i = 0; i < zeneLISTA.length; i++) {
+        for (let i = 0; i < zene.length; i++) {
             this.#szuloELEM.append(
                 `
                 <div class="card col-lg-4 col-md-6 col-sm-12">
-                    <p>Előadó: ${zeneLISTA[i].eloado}</p>
-                    <p>A dal címe: ${zeneLISTA[i].dalcim}</p>
-                    <p>Kiadási év: ${zeneLISTA[i].kiadasi_ev}</p>
+                    <p>Előadó: ${this.#zene.eloado}</p>
+                    <p>A dal címe: ${this.#zene.dalcim}</p>
+                    <p>Kiadási év: ${this.#zene.kiadasi_ev}</p>
                     <button class="zeneKosar">Kosárba</button>
                 </div>
                 `
