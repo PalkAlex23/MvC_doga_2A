@@ -19,7 +19,7 @@ export default class ZeneModell {
         }
     ]
     #kosarLISTA = []
-    #db = 0;
+    // #db = 0;
 
     constructor() {
         this.kosarFeltolt()

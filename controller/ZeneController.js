@@ -6,7 +6,7 @@ export default class ZeneController {
         this.taroloELEM = $(".tartalom")
         this.zenemodell = new ZeneModell();
         
-        console.log(this.zenemodell.getList())
+        // console.log(this.zenemodell.getList())
         new JoZenek(this.zenemodell.getList(), this.taroloELEM)
 
         this.#esemenykezelo()
